@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PCS公告</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend{margin:0; padding:0;}
+        ul,li,ol{list-style:none;}
+        img,fieldset{border:0; }
+        img{display:block;}
+        a{text-decoration:none; color:#333;}
+        h1,h2,h3,h4,h5,h6{font-weight:100;}
+        body{ font-family:"微软雅黑";}
+        input,a{outline:none;}
+        header{
+            height: 85px;
+            width: 100%;
+            background: #dedede;
+        }
+        .nav{
+            height: 85px;
+            width: 1200px;
+            background: url("../images/logos.png") no-repeat 100px 50%;
+            background-size: 80px 80px;
+            background-color: #000;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            margin-left: -600px;
+            z-index: 30;
+            line-height: 85px;
+            font-size: 14px;
+        }
+        .nav > span{
+            display: inline-block;
+            color: #dedede;
+            margin: 0 25px;
+            float: right;
+        }
+        .nav > .nav_c >.nav_c_p{
+            background: #000000;
+            border-radius: 3px;
+            display:none;
+        }
+        .nav > .nav_c > .nav_c_p a{
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #ffffff;
+            display: block;
+        }
+        .nav > .nav_c > .nav_c_p a:hover{
+            cursor: pointer;
+            color: #fddca7;
+        }
+        .nav > span >a{
+            color: #dedede;
+        }
+        .nav > span >a:hover{
+            color: #fddea8;
+        }
+        .nav > span:first-child{
+            margin-right: 100px;
+        }
+        .nav > span >img{
+            color: #dedede;
+            display: inline-block;
+            height: 6px;
+            width: 10px;
+            margin-left: 2px;
+        }
+        .nav > span:hover{
+            cursor: pointer;
+            color: #fddea8;
+        }
+        .langular_p >a{
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            color: #dedede;
+            font-size: 14px;
+            display: block;
+        }
+        .langular_p{
+            background: #000;
+            border-radius: 3px;
+            display: none;
+        }
+        .langular_p >a:hover{
+            color: #fddea8;
+        }
+        section{
+            width: 100%;
+            height: 1405px;
+            background: #dedede;
+        }
+        .section_box{
+            width: 1200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+        .banner{
+            height: 450px;
+            width: 100%;
+            background: url("../images/yingwen.jpg") no-repeat;
+            -webkit-background-size: 1200px 450px;
+            -ms-background-size: 1200px 450px;
+            -o-background-size: 1200px 450px;
+            -moz-background-size: 1200px 450px;
+            background-size: 1200px 450px;
+        }
+        .neirong{
+            height: 700px;
+            width: 1200px;
+            background: #ffffff;
+        }
+        .neirong_right{
+            width: 1000px;
+            height: 100%;
+            margin: 0 auto;
+            padding-top: 30px;
+        }
+        .neirong_right li{
+            margin-top: 30px;
+            height: 190px;
+            text-align: center;
+            font-size: 14px;
+            border: 2px solid #dedede;
+            border-radius: 10px;
+        }
+        .neirong_right li:first-child{
+            margin-top: 0;
+        }
+        .neirong_right span{
+            display: block;
+            font-size: 12px;
+            line-height: 20px;
+        }
+        .neirong_right li:hover{
+            background: #333333;
+            color: #fddca7;
+        }
+        .neirong_right li >p{
+            margin-top: 5px;
+        }
+        .neirong_right li >p:nth-child(2){
+             text-indent:2em
+         }
+        .neirong_right li >p:nth-child(3){
+            text-indent:2em
+        }
+        .neirong_right li >p:first-child{
+            font-size: 22px;
+            line-height: 50px;
+            font-weight: 800;
+        }
+        .fanhui{
+            height: 60px;
+            width: 80px;
+            background: #333333;
+            border-radius: 10px;
+            position: fixed;
+            top: 120px;
+        }
+        .fanhui >a{
+            display: block;
+            color: #fddea8;
+            font-size: 18px;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .home_footer{
+            height: 340px;
+            width: 100%;
+            background: url("../images/PCS.png") no-repeat 50% 75px;
+            background-size: 200px 50px;
+            background-color: #000;
+        }
+        .footer_tit{
+            font-size: 18px;
+            font-weight:600;
+            color: #fddca6;
+            text-align: center;
+            padding-top: 160px;
+            font-family:Arial;
+            letter-spacing: 1px;
+        }
+        .footer_int{
+            font-size: 16px;
+            font-weight:600;
+            color: #feddaa;
+            text-align: center;
+            padding-top: 60px;
+            font-family:Arial;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="nav">
+        <span class="langular">English<img src="../images/xiala.png"/>
+            <p class="langular_p">
+                <a href="gonggaoc.html">Chinese</a>
+                <a href="#">English</a>
+            </p>
+        </span>
+        <span class="nav_f"><a href="../index.html">Contact us</a></span>
+        <span class="nav_e"><a href="../index.html">Q&A</a></span>
+        <span class="nav_d">Notice</span>
+        <span class="nav_c">White paper
+            <p class="nav_c_p">
+                <a href="whitepapere.html">Check file</a>
+                <a href="../PCS白皮书(beta%201.0)英文版.docx" download="PCS白皮书(beta%201.0)英文版.docx">Download</a>
+            </p>
+        </span>
+        <span class="nav_a moren"><a href="../index.html">Home</a></span>
+    </div>
+</header>
+<section>
+    <div class="section_box">
+
+        <div class="banner"></div>
+
+        <div class="neirong">
+            <div class="fanhui">
+                <a href="../index.html">Return Home</a>
+            </div>
+            <div class="neirong_right">
+                <ul>
+                    <li class="lia">
+                        <p>About PCS suspends trading</p>
+                        <span>2018/11/11</span>
+                        <p>All PCS transactions will be suspended. PCS is wholly owned by chaineagle capital. Please pay attention to chaineagle capital for more details.</p>
+                    </li>
+                    <!--<li class="lib">-->
+                        <!--<p>关于Coinbell iOS 1.0.1新版本正式上线的公告1</p>-->
+                        <!--<span>2018/04/17</span>-->
+                        <!--<p>为了更好地增强用户的体验，Coinbell iOS 1.0.1最新版本已经正式上线，新版本对页面进行了优化，功能上新增了提币、去交易、交易对搜索、历史记录筛选等功能，操作更加清晰和便捷，如果还在使用Coinbell iOS 1.0.0版本的用户，请扫描以下二维码进行安装。 未来，我们还会增加更多更好的体验，感谢您的耐心等待和支持。</p>-->
+                    <!--</li>-->
+                    <!--<li class="lic">-->
+                        <!--<p>PCS区块链项目Token发行公告</p>-->
+                        <!--<span>2018/02/13</span>-->
+                        <!--<p>PCS（Personal Chain Operation System）已于2018年8月6日（UTC+8时间）正式在ASSETFUN平台发布通证（Toekn），通证将陆续分发给PCS现有的合作伙伴，待PCS主网上线时，将进行1:1映射。目前测试网络进展顺利，预计2019年2月（UTC+8时间）上线主网络。感谢您对PCS项目的理解和支持！</p>-->
+                        <!--<p>PCS简介:PCS是诞生于数字货币区块链3.0时代的多元化的区块链生态系统， 它以一个轻量级的区块链开发系统呈现，旨在打造一个可以堪比Microsoft这样的世界级开发平台，它将颠覆比特币和以太坊、乃至以及现阶段所有区块链项目的运行规则，成为每一个人都可以触手可及的区块链编程系统。PCS发行总量：1.9亿。</p>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+        </div>
+
+        <div class="home_footer">
+            <p class="footer_tit">COMMUNITY</p>
+            <p class="footer_int">EVELOPER RESOURCES:PRIVACY POLICY、TERMS OF USE</p>
+        </div>
+    </div>
+</section>
+</body>
+<script src="../js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".langular").click(function(){
+            $(this).find(".langular_p").slideToggle(200);
+        });
+
+        $(".nav_c").click(function(){
+            $(this).find(".nav_c_p").slideToggle(200);
+        });
+    });
+
+</script>
+</html>
