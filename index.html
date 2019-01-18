@@ -3,6 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>PCS</title>
+    <script type="text/javascript">
+        // 移动端和PC端判断
+        var reg = /([a-zA-Z]+)?([a-zA-Z]+.*\;\s([a-zA-Z0-9]+)?)/;
+        var newNav = navigator.appVersion.match(reg);
+        if(newNav) {
+            var nav = newNav[0];
+            var navArr = nav.split(/(\s)|((\s\d\.\d)?\;)/);
+            var flag = false;
+            for (var i = 0, len = navArr.length; i < len; i++) {
+                if (navArr[i] == 'Android' || navArr[i] == 'iPhone' || navArr[i] == 'iPad' || navArr[i] == 'MeeGo' || navArr[i] == 'NokiaN9' || navArr[i] == 'NOKIA') {
+                    flag = true;
+                    break;
+                }
+            }
+            if (flag) {
+                window.location.href = "mobile/home.html";
+            }
+        }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylesheet/style.css" type="text/css" >
     <script src="js/jquery-1.4.2.min.js"></script>
