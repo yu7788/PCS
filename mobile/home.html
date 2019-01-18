@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PCS-HOME</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script>
+
+        (function(){
+            var currClientWidth,
+                fontValue,
+                originWidth;
+            originWidth = 750;//ui设计稿的宽度，一般750或640
+            __resize();
+
+            window.addEventListener('resize', __resize, false);
+
+            function __resize() {
+                currClientWidth = document.documentElement.clientWidth;
+                if (currClientWidth > 768){
+                    currClientWidth = 768;
+                }
+                if (currClientWidth < 320){
+                    currClientWidth = 320;
+                }
+                fontValue = ((625 * currClientWidth) / originWidth).toFixed(2);
+                document.documentElement.style.fontSize = fontValue + '%';
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="css/home.css">
+    <script src="../js/jquery-1.4.2.min.js"></script>
+</head>
+<body>
+<header>
+    <div class="logo"></div>
+    <div class="langular">English</div>
+    <div class="langular_p">
+        <a href="#">English</a>
+        <a href="html/homeen.html">Chinese</a>
+    </div>
+    <div class="nav"></div>
+    <ul class="nav_lists">
+        <li><a href="#">Home</a></li>
+        <li><a href="html/notice.html">Notice</a></li>
+    </ul>
+</header>
+<section>
+    <div class="section_box">
+        <div class="banner"></div>
+        <div class="system">
+            <h3>A CORE DEVELOPMENT SYSTEM</h3>
+            <P>A world-class development system that can be compared to Microsoft</P>
+        </div>
+        <div class="innovation">
+            <h3>FIVE INNOVATIONS</h3>
+            <ul class="lists">
+                <li class="lists_a"><p>Commonality and compatibility design</p></li>
+                <li class="lists_b"><p>Improve the scalability of the underlying chain</p></li>
+                <li class="lists_c"><p>Humane blockchain programming opertion</p></li>
+                <li class="lists_d"><p>Second level processing speed</p></li>
+                <li class="lists_e"><p>Network resources for fre</p></li>
+            </ul>
+        </div>
+        <div class="model">
+            <h3>SEVEN-TIER ARCHITECTURE MODL</h3>
+            <ul class="model_lists">
+                <li class="model_lists_a">ECOLOGICAL LATER</li>
+                <li class="model_lists_b">TOOL LATER</li>
+                <li class="model_lists_c">CONSENSUS LAYER</li>
+                <li class="model_lists_d">RESOURCE LAYER</li>
+                <li class="model_lists_e">DAPP LAYER</li>
+                <li class="model_lists_f">CONTRACT LAYER</li>
+                <li class="model_lists_g">PROTOCOL LAYER</li>
+            </ul>
+        </div>
+        <div class="scenario">
+            <h3>PCS APPLICATION SCENARIO</h3>
+            <div class="shan">
+                <p class="shan_a">DAPP</p>
+                <p class="shan_b">SUPPORT</p>
+                <p class="shan_c">MULTIPLE</p>
+                <p class="shan_d">COMMUNITY</p>
+            </div>
+        </div>
+        <div class="vision">
+            <h3>VISION OF PCS</h3>
+            <p>Through blockchain technology R&D and innovation,an open transparent,secure and diversified ecosysstem is built for enterprise users ang ordinary users</p>
+        </div>
+        <div class="roadmap">
+            <h3>EOADMAP</h3>
+            <div class="roadmap_time">
+                <ul class="time_listis">
+                    <li>2018.5-7</li>
+                    <li>2018.06</li>
+                    <li>2018.07</li>
+                    <li>2018.08</li>
+                    <li>2018.09</li>
+                    <li>2018.10</li>
+                    <li>2018.11</li>
+                    <li>2018.12</li>
+                    <li>2019.02</li>
+                </ul>
+                <ul class="kuai_listis">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ul class="content_listis">
+                    <li>Rroject established</li>
+                    <li>Layout global operation center</li>
+                    <li>Token will be lanched on the exchange，Developing pcs core value layer</li>
+                    <li>Pcs core value layer and application layer middleware</li>
+                    <li>Developing PCS application layer</li>
+                    <li>Docking pcs core application layer, designing GUI interface and developing</li>
+                    <li>Blockchain system integration testing</li>
+                    <li> Mainnet test，Proprietary Dapp architecture design</li>
+                    <li>Mainnet lanch</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p class="footer_tit">COMMUNITY</p>
+            <p class="footer_int">EVELOPER RESOURCES:PRIVACY POLICY、TERMS OF USE</p>
+        </div>
+
+    </div>
+</section>
+
+</body>
+<script type="text/javascript">
+    $(function () {
+        $(".langular").click(function () {
+            $(".langular_p").slideToggle("100");
+        });
+
+        $(".nav").click(function () {
+            $(".nav_lists").slideToggle("100");
+        })
+    })
+</script>
+</html>

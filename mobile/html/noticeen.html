@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PCS-公告</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script>
+
+        (function(){
+            var currClientWidth,
+                fontValue,
+                originWidth;
+            originWidth = 750;//ui设计稿的宽度，一般750或640
+            __resize();
+
+            window.addEventListener('resize', __resize, false);
+
+            function __resize() {
+                currClientWidth = document.documentElement.clientWidth;
+                if (currClientWidth > 768){
+                    currClientWidth = 768;
+                }
+                if (currClientWidth < 320){
+                    currClientWidth = 320;
+                }
+                fontValue = ((625 * currClientWidth) / originWidth).toFixed(2);
+                document.documentElement.style.fontSize = fontValue + '%';
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="../css/noticeen.css">
+    <script src="../../js/jquery-1.4.2.min.js"></script>
+</head>
+<body>
+<header>
+    <div class="logo"></div>
+    <div class="langular">中文</div>
+    <div class="langular_p">
+        <a href="notice.html">英文</a>
+        <a href="#">中文</a>
+    </div>
+    <div class="nav"></div>
+    <ul class="nav_lists">
+        <li><a href="homeen.html">首页</a></li>
+        <li><a href="#">公告</a></li>
+    </ul>
+</header>
+<section>
+    <ul class="notice_lists">
+        <li class="lia">
+            <h3>PCS全新启动开放交易</h3>
+            <span>2019/01/03</span>
+            <p>经由链鹰资本收购重组后，PCS于2019年01月03日15 : 00开放交易。更多信息请关注coinbell交易平台www.coinbell.org.</p>
+        </li>
+        <li class="lib">
+            <h3>关于PCS暂停交易</h3>
+            <span>2018/11/11</span>
+            <p>暂停所有PCS交易，PCS被链鹰资本全资收购，更多详细信息请关注链鹰资本。</p>
+        </li>
+    </ul>
+</section>
+
+</body>
+<script type="text/javascript">
+    $(function () {
+        $(".langular").click(function () {
+            $(".langular_p").slideToggle("100");
+        });
+
+        $(".nav").click(function () {
+            $(".nav_lists").slideToggle("100");
+        })
+    })
+</script>
+</html>

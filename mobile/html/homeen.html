@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PCS-首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script>
+
+        (function(){
+            var currClientWidth,
+                fontValue,
+                originWidth;
+            originWidth = 750;//ui设计稿的宽度，一般750或640
+            __resize();
+
+            window.addEventListener('resize', __resize, false);
+
+            function __resize() {
+                currClientWidth = document.documentElement.clientWidth;
+                if (currClientWidth > 768){
+                    currClientWidth = 768;
+                }
+                if (currClientWidth < 320){
+                    currClientWidth = 320;
+                }
+                fontValue = ((625 * currClientWidth) / originWidth).toFixed(2);
+                document.documentElement.style.fontSize = fontValue + '%';
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="../css/homeen.css">
+    <script src="../../js/jquery-1.4.2.min.js"></script>
+</head>
+<body>
+<header>
+    <div class="logo"></div>
+    <div class="langular">中文</div>
+    <div class="langular_p">
+        <a href="../home.html">英文</a>
+        <a href="#">中文</a>
+    </div>
+    <div class="nav"></div>
+    <ul class="nav_lists">
+        <li><a href="#">首页</a></li>
+        <li><a href="noticeen.html">公告</a></li>
+    </ul>
+</header>
+<section>
+    <div class="section_box">
+        <div class="banner"></div>
+        <div class="system">
+            <h3>核心发展系统</h3>
+            <P>可以堪比Microsoft的世界级开发系统</P>
+        </div>
+        <div class="innovation">
+            <h3>五大创新点</h3>
+            <ul class="lists">
+                <li class="lists_a"><p>共通性和兼容性设计</p></li>
+                <li class="lists_b"><p>提升底层公链的可拓展性</p></li>
+                <li class="lists_c"><p>人性化的区块链编程操作</p></li>
+                <li class="lists_d"><p>支持秒级处理速度</p></li>
+                <li class="lists_e"><p>用户免费使用网络资源</p></li>
+            </ul>
+        </div>
+        <div class="model">
+            <h3>七层架构模型</h3>
+            <ul class="model_lists">
+                <li class="model_lists_a">资源层</li>
+                <li class="model_lists_b">协议层</li>
+                <li class="model_lists_c">共识层</li>
+                <li class="model_lists_d">合约层</li>
+                <li class="model_lists_e">工具层</li>
+                <li class="model_lists_f">去中心化应用层</li>
+                <li class="model_lists_g">生态层</li>
+            </ul>
+        </div>
+        <div class="scenario">
+            <h3>PCS应用场景</h3>
+            <div class="shan">
+                <p class="shan_a">去中心化<br/>应用</p>
+                <p class="shan_b">侧链支持交<br/>易及分红</p>
+                <p class="shan_c">多个行业<br/>支持</p>
+                <p class="shan_d">社区福利<br/>应用</p>
+            </div>
+        </div>
+        <div class="vision">
+            <h3>PCS的愿景</h3>
+            <p>通过持续性的区块链技术研发和创新，为企业用户、普通用户搭建一个开放、透明、安全和多元化的生态系统。</p>
+        </div>
+        <div class="roadmap">
+            <h3>实现路线图</h3>
+            <div class="roadmap_time">
+                <ul class="time_listis">
+                    <li>2018.5-7</li>
+                    <li>2018.06</li>
+                    <li>2018.07</li>
+                    <li>2018.08</li>
+                    <li>2018.09</li>
+                    <li>2018.10</li>
+                    <li>2018.11</li>
+                    <li>2018.12</li>
+                    <li>2019.02</li>
+                </ul>
+                <ul class="kuai_listis">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ul class="content_listis">
+                    <li>主网底层架构设计，团队组建</li>
+                    <li>全球运营中心布局</li>
+                    <li>通证上平台交易，开发pcs价值核心层</li>
+                    <li>pcs价值核心层与应用层中间件</li>
+                    <li>pcs应用层开发</li>
+                    <li>pcs核心层应用层对接，GUI界面设计和开发</li>
+                    <li>GUI界面开发，区块链系统整合测试</li>
+                    <li>主网测试网上线，专有Dapp架构设计</li>
+                    <li>主网正式上线</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p class="footer_tit">社区</p>
+            <p class="footer_int">开发者资源：隐私政策、使用条款</p>
+        </div>
+    </div>
+</section>
+
+</body>
+<script type="text/javascript">
+    $(function () {
+        $(".langular").click(function () {
+            $(".langular_p").slideToggle("100");
+        });
+
+        $(".nav").click(function () {
+            $(".nav_lists").slideToggle("100");
+        })
+    })
+</script>
+</html>

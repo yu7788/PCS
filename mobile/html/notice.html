@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PCS-Notice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script>
+
+        (function(){
+            var currClientWidth,
+                fontValue,
+                originWidth;
+            originWidth = 750;//ui设计稿的宽度，一般750或640
+            __resize();
+
+            window.addEventListener('resize', __resize, false);
+
+            function __resize() {
+                currClientWidth = document.documentElement.clientWidth;
+                if (currClientWidth > 768){
+                    currClientWidth = 768;
+                }
+                if (currClientWidth < 320){
+                    currClientWidth = 320;
+                }
+                fontValue = ((625 * currClientWidth) / originWidth).toFixed(2);
+                document.documentElement.style.fontSize = fontValue + '%';
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="../css/notice.css">
+    <script src="../../js/jquery-1.4.2.min.js"></script>
+</head>
+<body>
+<header>
+    <div class="logo"></div>
+    <div class="langular">English</div>
+    <div class="langular_p">
+        <a href="#">English</a>
+        <a href="noticeen.html">Chinese</a>
+    </div>
+    <div class="nav"></div>
+    <ul class="nav_lists">
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="#">Notice</a></li>
+    </ul>
+</header>
+<section>
+    <ul class="notice_lists">
+        <li class="lia">
+            <h3>PCS launches new open trading</h3>
+            <span>2019/01/03</span>
+            <p>After acquisition and reorganization by chain eagle capital, PCS was opened for trading at 15:00 on January 3rd, 2019.For more information, check out coinbell trading platform www.coinbell.org.</p>
+        </li>
+        <li class="lib">
+            <h3>About PCS suspends trading</h3>
+            <span>2018/11/11</span>
+            <p>All PCS transactions will be suspended. PCS is wholly owned by chaineagle capital. Please pay attention to chaineagle capital for more details.</p>
+        </li>
+    </ul>
+</section>
+</body>
+<script type="text/javascript">
+    $(function () {
+        $(".langular").click(function () {
+            $(".langular_p").slideToggle("100");
+        });
+
+        $(".nav").click(function () {
+            $(".nav_lists").slideToggle("100");
+        })
+    })
+</script>
+</html>
