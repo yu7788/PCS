@@ -49,11 +49,11 @@
     <div class="section_box">
         <div class="banner"></div>
         <div class="system">
-            <h3>核心发展系统</h3>
+            <h3 class="system_tit">核心发展系统</h3>
             <P>可以堪比Microsoft的世界级开发系统</P>
         </div>
         <div class="innovation">
-            <h3>五大创新点</h3>
+            <h3 class="innovation_tit">五大创新点</h3>
             <ul class="lists">
                 <li class="lists_a"></li>
                 <li class="lists_b"></li>
@@ -63,7 +63,7 @@
             </ul>
         </div>
         <div class="model">
-            <h3>七层架构模型</h3>
+            <h3 class="model_tit">七层架构模型</h3>
             <ul class="model_lists">
                 <li class="model_lists_a">资源层</li>
                 <li class="model_lists_b">协议层</li>
@@ -75,7 +75,7 @@
             </ul>
         </div>
         <div class="scenario">
-            <h3>PCS应用场景</h3>
+            <h3 class="scenario_tit">PCS应用场景</h3>
             <div class="shan">
                 <p class="shan_a">去中心化<br/>应用</p>
                 <p class="shan_b">侧链支持交<br/>易及分红</p>
@@ -84,11 +84,11 @@
             </div>
         </div>
         <div class="vision">
-            <h3>PCS的愿景</h3>
+            <h3 class="vision_tit">PCS的愿景</h3>
             <p>通过持续性的区块链技术研发和创新，为企业用户、普通用户搭建一个开放、透明、安全和多元化的生态系统。</p>
         </div>
         <div class="roadmap">
-            <h3>实现路线图</h3>
+            <h3 class="roadmap_tit">实现路线图</h3>
             <div class="roadmap_time">
                 <ul class="time_listis">
                     <li>2018.5-7</li>
@@ -136,6 +136,34 @@
 </body>
 <script type="text/javascript">
     $(function () {
+        $(".banner").animate({height:"3.2rem"},1000);
+        $(".lists").find("li").animate({width:"2.3rem"});
+        $(".system_tit").fadeIn("1200");
+        $(".model_tit").fadeIn("1200");
+        $(".scenario_tit").fadeIn("1200");
+        $(".vision_tit").fadeIn("1200");
+        $(".roadmap_tit").fadeIn("1200");
+        $(window).scroll(function () {
+            let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+            if (scrollTop > 300){
+                $(".model_lists_a").fadeIn("1200");
+                $(".model_lists_b").fadeIn("1400");
+                $(".model_lists_c").fadeIn("1600");
+                $(".model_lists_d").fadeIn("1800");
+                $(".model_lists_e").fadeIn("2000");
+                $(".model_lists_f").fadeIn("2200");
+                $(".model_lists_g").fadeIn("2400");
+            }
+            let scrollTop_t = $(this).scrollTop();
+            let scrollHeight = $(document).height();
+            let windowHeight = $(this).height();
+            if(scrollTop_t + windowHeight == scrollHeight){
+                $(".footer").animate({height:"5.5rem"},5000);
+            }
+
+
+        });
+
         $(".langular").click(function () {
             $(".langular_p").slideToggle("100");
         });

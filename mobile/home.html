@@ -49,11 +49,11 @@
     <div class="section_box">
         <div class="banner"></div>
         <div class="system">
-            <h3>A CORE DEVELOPMENT SYSTEM</h3>
+            <h3 class="system_tit">A CORE DEVELOPMENT SYSTEM</h3>
             <P>A world-class development system that can be compared to Microsoft</P>
         </div>
         <div class="innovation">
-            <h3>FIVE INNOVATIONS</h3>
+            <h3 class="innovation_tit">FIVE INNOVATIONS</h3>
             <ul class="lists">
                 <li class="lists_a"></li>
                 <li class="lists_b"></li>
@@ -63,7 +63,7 @@
             </ul>
         </div>
         <div class="model">
-            <h3>SEVEN-TIER ARCHITECTURE MODL</h3>
+            <h3 class="model_tit">SEVEN-TIER ARCHITECTURE MODL</h3>
             <ul class="model_lists">
                 <li class="model_lists_a">ECOLOGICAL LATER</li>
                 <li class="model_lists_b">TOOL LATER</li>
@@ -75,7 +75,7 @@
             </ul>
         </div>
         <div class="scenario">
-            <h3>PCS APPLICATION SCENARIO</h3>
+            <h3 class="scenario_tit">PCS APPLICATION SCENARIO</h3>
             <div class="shan">
                 <p class="shan_a">DAPP</p>
                 <p class="shan_b">SUPPORT</p>
@@ -84,11 +84,11 @@
             </div>
         </div>
         <div class="vision">
-            <h3>VISION OF PCS</h3>
+            <h3 class="vision_tit">VISION OF PCS</h3>
             <p>Through blockchain technology R&D and innovation,an open transparent,secure and diversified ecosysstem is built for enterprise users ang ordinary users</p>
         </div>
         <div class="roadmap">
-            <h3>EOADMAP</h3>
+            <h3 class="roadmap_tit">EOADMAP</h3>
             <div class="roadmap_time">
                 <ul class="time_listis">
                     <li>2018.5-7</li>
@@ -137,13 +137,39 @@
 </body>
 <script type="text/javascript">
     $(function () {
+        $(".banner").animate({height:"3.2rem"},1000);
+        $(".lists").find("li").animate({width:"2.3rem"});
+        $(".system_tit").fadeIn("1200");
+        $(".innovation_tit").fadeIn("1200");
+        $(window).scroll(function () {
+            let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+            if (scrollTop > 300){
+                $(".model_lists_a").fadeIn("1200");
+                $(".model_lists_b").fadeIn("1400");
+                $(".model_lists_c").fadeIn("1600");
+                $(".model_lists_d").fadeIn("1800");
+                $(".model_lists_e").fadeIn("2000");
+                $(".model_lists_f").fadeIn("2200");
+                $(".model_lists_g").fadeIn("2400");
+            }
+            let scrollTop_t = $(this).scrollTop();
+            let scrollHeight = $(document).height();
+            let windowHeight = $(this).height();
+            if(scrollTop_t + windowHeight == scrollHeight){
+                $(".footer").animate({height:"5.5rem"},5000);
+            }
+
+
+        });
+
         $(".langular").click(function () {
-            $(".langular_p").slideToggle("100");
+            $(".langular_p").slideToggle("10");
         });
 
         $(".nav").click(function () {
-            $(".nav_lists").slideToggle("100");
-        })
+            $(".nav_lists").slideToggle("10");
+        });
+
     })
 </script>
 </html>
