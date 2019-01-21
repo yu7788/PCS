@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="../css/homeen.css">
     <script src="../../js/jquery-1.4.2.min.js"></script>
 </head>
-<body>
+<body onload="quk()">
 <header>
     <div class="logo"></div>
     <div class="langular">中文</div>
@@ -135,43 +135,43 @@
 
 </body>
 <script type="text/javascript">
-    $(function () {
-        $(".banner").animate({height:"3.2rem"},1000);
-        $(".lists").find("li").animate({width:"2.3rem"},1500);
-        $(".system_tit").fadeIn("2000");
-        $(".innovation_tit").fadeIn("3000");
-        $(".model_tit").fadeIn("4000");
-        $(".scenario_tit").fadeIn("5000");
-        $(".vision_tit").fadeIn("6000");
-        $(".roadmap_tit").fadeIn("7000");
-        $(window).scroll(function () {
-            let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-            if (scrollTop > 300){
-                $(".model_lists_a").fadeIn("2000");
-                $(".model_lists_b").fadeIn("3000");
-                $(".model_lists_c").fadeIn("4000");
-                $(".model_lists_d").fadeIn("5000");
-                $(".model_lists_e").fadeIn("6000");
-                $(".model_lists_f").fadeIn("7000");
-                $(".model_lists_g").fadeIn("8000");
-            }
-            let scrollTop_t = $(this).scrollTop();
-            let scrollHeight = $(document).height();
-            let windowHeight = $(this).height();
-            if(scrollTop_t + windowHeight == scrollHeight){
-                $(".footer").animate({height:"5.5rem"},5000);
-            }
+    function quk(){
+        $(function () {
+            $(".banner").animate({height:"3.2rem"},1000);
+            $(".lists").find("li").animate({width:"2.3rem"},1500);
+            $(".system_tit").fadeIn("2000");
+            $(".innovation_tit").fadeIn("3000");
+            $(".model_tit").fadeIn("4000");
+            $(".scenario_tit").fadeIn("5000");
+            $(".vision_tit").fadeIn("6000");
+            $(".roadmap_tit").fadeIn("7000");
+            $(window).scroll(function () {
+                let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+                if (scrollTop > 300){
+                    $(".model_lists_a").fadeIn("2000");
+                    $(".model_lists_b").fadeIn("3000");
+                    $(".model_lists_c").fadeIn("4000");
+                    $(".model_lists_d").fadeIn("5000");
+                    $(".model_lists_e").fadeIn("6000");
+                    $(".model_lists_f").fadeIn("7000");
+                    $(".model_lists_g").fadeIn("8000");
+                }
+                let scrollTop_t = $(this).scrollTop();
+                let scrollHeight = $(document).height();
+                let windowHeight = $(this).height();
+                if(scrollTop_t + windowHeight == scrollHeight){
+                    $(".footer").animate({height:"5.5rem"},5000);
+                }
+            });
 
+            $(".langular").click(function () {
+                $(".langular_p").slideToggle("0");
+            });
 
-        });
-
-        $(".langular").click(function () {
-            $(".langular_p").slideToggle("0");
-        });
-
-        $(".nav").click(function () {
-            $(".nav_lists").slideToggle("0");
+            $(".nav").click(function () {
+                $(".nav_lists").slideToggle("0");
+            });
         })
-    })
+    }
 </script>
 </html>
