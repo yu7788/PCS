@@ -147,44 +147,36 @@ section{
     color: #ffffff;
 }
 .lists >li{
-    height: 1.8rem;
-    width: 2rem;
-    background: url("../images/pcs_shouye_liubianxing.png") no-repeat center;
-    background-size: 2rem 1.8rem;
+    height: 2rem;
+    width: 2.3rem;
+    background-size: 2.3rem 2rem;
     position: absolute;
 }
 .lists_a{
     top: 0;
     left: 0.7rem;
+    background: url("../images/a_zhong.png") no-repeat center;
 }
 .lists_b{
     top: 0;
     right: 0.7rem;
+    background: url("../images/b_zhong.png") no-repeat center;
 }
 .lists_c{
     top: 1.2rem;
     margin-left: 50%;
-    left: -1rem;
+    left: -1.15rem;
+    background: url("../images/c_zhong.png") no-repeat center;
 }
 .lists_d{
     top: 2.3rem;
     left: 0.7rem;
+    background: url("../images/d_zhong.png") no-repeat center;
 }
 .lists_e{
     top: 2.3rem;
     right: 0.7rem;
-}
-.lists >li >p{
-    height: 1.8rem;
-    width: 1rem;
-    margin: 0 auto;
-    line-height: 0.6rem;
-    text-align: center;
-    font-size: 0.12rem;
-    color: #ffffff;
-}
-.lists_d >p{
-    padding-top: 0.28rem;
+    background: url("../images/e_zhong.png") no-repeat center;
 }
 .model{
     height: 8rem;
@@ -385,10 +377,6 @@ section{
     margin-left: 1.5rem;
     padding-top: 0.25rem;
 }
-
-
-
-
 .footer{
     height: 5.5rem;
     width: 100%;
@@ -403,7 +391,7 @@ section{
     height: 100%;
     text-align: center;
     position: absolute;
-    top: 2.7rem;
+    top: 3.4rem;
 }
 .footer_int{
     width: 80%;
