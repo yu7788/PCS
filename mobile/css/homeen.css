@@ -209,6 +209,7 @@ section{
     height: 0.7rem;
     line-height: 0.7rem;
     width: 47.5%;
+    display: none;
 }
 .model_lists_a{
     text-align: right;
