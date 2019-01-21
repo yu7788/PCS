@@ -137,22 +137,23 @@
 <script type="text/javascript">
     $(function () {
         $(".banner").animate({height:"3.2rem"},1000);
-        $(".lists").find("li").animate({width:"2.3rem"},500);
-        $(".system_tit").fadeIn("1200");
-        $(".model_tit").fadeIn("1200");
-        $(".scenario_tit").fadeIn("1200");
-        $(".vision_tit").fadeIn("1200");
-        $(".roadmap_tit").fadeIn("1200");
+        $(".lists").find("li").animate({width:"2.3rem"},1500);
+        $(".system_tit").fadeIn("2000");
+        $(".innovation_tit").fadeIn("3000");
+        $(".model_tit").fadeIn("4000");
+        $(".scenario_tit").fadeIn("5000");
+        $(".vision_tit").fadeIn("6000");
+        $(".roadmap_tit").fadeIn("7000");
         $(window).scroll(function () {
             let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
             if (scrollTop > 300){
-                $(".model_lists_a").fadeIn("1200");
-                $(".model_lists_b").fadeIn("1400");
-                $(".model_lists_c").fadeIn("1600");
-                $(".model_lists_d").fadeIn("1800");
-                $(".model_lists_e").fadeIn("2000");
-                $(".model_lists_f").fadeIn("2200");
-                $(".model_lists_g").fadeIn("2400");
+                $(".model_lists_a").fadeIn("2000");
+                $(".model_lists_b").fadeIn("3000");
+                $(".model_lists_c").fadeIn("4000");
+                $(".model_lists_d").fadeIn("5000");
+                $(".model_lists_e").fadeIn("6000");
+                $(".model_lists_f").fadeIn("7000");
+                $(".model_lists_g").fadeIn("8000");
             }
             let scrollTop_t = $(this).scrollTop();
             let scrollHeight = $(document).height();
@@ -165,11 +166,11 @@
         });
 
         $(".langular").click(function () {
-            $(".langular_p").slideToggle("100");
+            $(".langular_p").slideToggle("0");
         });
 
         $(".nav").click(function () {
-            $(".nav_lists").slideToggle("100");
+            $(".nav_lists").slideToggle("0");
         })
     })
 </script>
